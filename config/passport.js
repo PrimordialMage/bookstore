@@ -43,7 +43,7 @@ passport.use('local.signup', new LocalStrategy({
 		return done(null, false, req.flash('error', messages));
 	}
 
-	// Checking if Email already exist
+	
 	User.findOne({'email': email}, function(err, user){
 
 		// Error
@@ -97,7 +97,7 @@ passport.use('local.signin', new LocalStrategy({
 		return done(null, false, req.flash('error', messages));
 	}
 
-	// Checking if Email already exist
+	
 	User.findOne({'email': email}, function(err, user){
 
 		// Error
